@@ -1,5 +1,5 @@
 # --------------------------
-# Classe Personne
+# Classe Personne :
 # --------------------------
 class Personne:
     def __init__(self, nom, poid):
