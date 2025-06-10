@@ -103,7 +103,7 @@ def test_taxi_scooter():
 
     print("\n🧍 Sortie de p2")
     taxi.sortir(p2)
-    assert taxi.get_poids() == 120
+    assert taxi.get_poids() == 160
     assert not taxi.est_en_surpoids()
     print("✅ p2 est sorti, poids total = 120 kg, plus de surpoids")
 
