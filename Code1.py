@@ -6,20 +6,7 @@ class Personne:
         self.__nom = nom
         self.__poid = poid
 
-    def get_nom(self):
-        return self.__nom
 
-    def set_nom(self, nom):
-        self.__nom = nom
-
-    def get_poid(self):
-        return self.__poid
-
-    def set_poid(self, poid):
-        self.__poid = poid
-
-    def __str__(self):
-        return f"Personne ---> nom : {self.__nom}, poid : {self.__poid}"
 
 
 # --------------------------
@@ -30,20 +17,7 @@ class Endroit:
         self.__abs = abs
         self.__ord = ord
 
-    def get_abs(self):
-        return self.__abs
 
-    def set_abs(self, abs):
-        self.__abs = abs
-
-    def get_ord(self):
-        return self.__ord
-
-    def set_ord(self, ord):
-        self.__ord = ord
-
-    def __str__(self):
-        return f"Endroit ---> [abs= {self.__abs}, ord= {self.__ord}]"
 
 
 # --------------------------
@@ -124,7 +98,7 @@ def test_taxi_scooter():
     print("✅ Surpoids détecté")
 
     print("\n🚫 Tentative de déplacement en surpoids")
-    assert not taxi.deplacer(depart, arrivee)
+    assert not taxi.deplacer(depart, arrive)
     print("✅ Déplacement bloqué en surpoids")
 
     print("\n🧍 Sortie de p2")
@@ -136,7 +110,7 @@ def test_taxi_scooter():
     print("\n🚕 Déplacement autorisé vers (10,10)")
     assert taxi.deplacer(depart, arrivee)
     e = taxi.get_endroit()
-    assert e.get_abs() == 10 and e.get_ord() == 10
+    assert e.get_abs() == 10 and e.get_ord() == 8
     print("✅ Déplacement effectué avec succès")
 
     print("\n🧍 Entrée de p3 (60 kg)")
